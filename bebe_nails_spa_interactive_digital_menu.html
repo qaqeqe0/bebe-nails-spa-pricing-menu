@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeBe Nails Spa - Exclusive Digital Menu</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxuryGold: '#D9A94B',
+                        richGold: '#C9972C',
+                        champagneGold: '#E6C06C',
+                        warmWhite: '#FAF8F5',
+                        ivory: '#F7F2EA',
+                        lightGray: '#D7D7DB',
+                        mediumGray: '#BFC0C6',
+                        darkGray: '#6F7077',
+                        charcoal: '#333333',
+                        blackAccent: '#222222',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        accent: ['Allura', 'cursive'],
+                    },
+                    borderRadius: {
+                        'soft': '20px',
+                        'card': '24px',
+                    },
+                    boxShadow: {
+                        'luxury': '0 10px 35px rgba(0,0,0,0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E6C06C;
+            border-radius: 3px;
+        }
+        /* Background noise/marble representation */
+        .bg-marble-texture {
+            background-color: #FAF8F5;
+            background-image: radial-gradient(rgba(217, 169, 75, 0.04) 1px, transparent 0),
+                              radial-gradient(rgba(217, 169, 75, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        /* Soft Floating Keyframes for brand Sparkles */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+            50% { transform: translateY(-10px) rotate(15deg); opacity: 1; }
+        }
+        .sparkle-element {
+            animation: float 4s ease-in-out infinite;
+        }
+        .sparkle-delayed {
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .service-section [data-name] {
+            gap: 1rem;
+        }
+        .service-section [data-name] > span:last-child,
+        .service-section [data-name] > div:last-child {
+            flex-shrink: 0;
+        }
+        .service-section [data-name] > span:last-child {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-marble-texture text-charcoal font-sans selection:bg-luxuryGold selection:text-white overflow-x-hidden">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-blackAccent text-warmWhite text-center py-2 px-4 text-xs tracking-widest uppercase font-light">
+        ✨ RELAX. REFRESH. SHINE. &bull; PREMIUM NAIL SALON & SPA EXPERIENCE ✨
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-ivory transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+            
+            <!-- BRAND LOGO AND TYPOGRAPHY -->
+            <div class="flex items-center space-x-3">
+                <div class="relative w-12 h-12 flex items-center justify-center rounded-full bg-ivory border border-luxuryGold/30">
+                    <svg viewBox="0 0 100 100" class="w-8 h-8 text-luxuryGold" fill="currentColor">
+                        <rect x="38" y="15" width="24" height="30" rx="3" fill="#D9A94B" />
+                        <rect x="28" y="45" width="44" height="42" rx="10" fill="none" stroke="#222222" stroke-width="4" />
+                        <circle cx="68" cy="40" r="4" fill="#BFC0C6" />
+                        <circle cx="75" cy="50" r="2.5" fill="#BFC0C6" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-[0.15em] text-blackAccent uppercase">
+                        BEBE <span class="text-luxuryGold font-medium">NAILS SPA</span>
+                    </h1>
+                    <p class="text-[9px] sm:text-[10px] tracking-[0.3em] text-darkGray uppercase -mt-1 font-light">Best Nail Salon In Town</p>
+                </div>
+            </div>
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-widest text-blackAccent uppercase">
+                <a href="#pedicure-sec" class="hover:text-luxuryGold transition-colors">Pedicures</a>
+                <a href="#enhancements-sec" class="hover:text-luxuryGold transition-colors">Nail Enhancements</a>
+                <a href="#dipping-sec" class="hover:text-luxuryGold transition-colors">Dipping Powder</a>
+                <a href="#manicure-sec" class="hover:text-luxuryGold transition-colors">Manicures</a>
+                <a href="#additional-sec" class="hover:text-luxuryGold transition-colors">Other Services</a>
+            </nav>
+
+            <!-- CALL TO ACTION -->
+            <div class="flex items-center space-x-4">
+                <a href="#booking-cta" class="hidden sm:inline-block bg-luxuryGold hover:bg-richGold text-white font-medium text-xs tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-sm">
+                    Book Appointment
+                </a>
+                <button id="mobile-menu-toggle" class="md:hidden p-2 text-charcoal hover:text-luxuryGold">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- MOBILE NAVIGATION DROPDOWN -->
+        <div id="mobile-menu" class="hidden md:hidden bg-warmWhite border-t border-ivory px-4 py-4 space-y-3 shadow-inner">
+            <a href="#pedicure-sec" class="block text-sm font-medium tracking-wider text-blackAccent uppercase hover:text-luxuryGold py-1" onclick="closeMobileMenu()">Pedicures</a>
+            <a href="#enhancements-sec" class="block text-sm font-medium tracking-wider text-blackAccent uppercase hover:text-luxuryGold py-1" onclick="closeMobileMenu()">Nail Enhancements</a>
+            <a href="#dipping-sec" class="block text-sm font-medium tracking-wider text-blackAccent uppercase hover:text-luxuryGold py-1" onclick="closeMobileMenu()">Dipping Powder</a>
+            <a href="#manicure-sec" class="block text-sm font-medium tracking-wider text-blackAccent uppercase hover:text-luxuryGold py-1" onclick="closeMobileMenu()">Manicures</a>
+            <a href="#additional-sec" class="block text-sm font-medium tracking-wider text-blackAccent uppercase hover:text-luxuryGold py-1" onclick="closeMobileMenu()">Additional & Waxing</a>
+            <a href="#booking-cta" class="block w-full text-center bg-luxuryGold text-white font-medium text-xs tracking-widest uppercase py-3 rounded-full" onclick="closeMobileMenu()">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-white py-16 sm:py-24 overflow-hidden border-b border-ivory">
+        <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full border border-luxuryGold/10 pointer-events-none"></div>
+        <div class="absolute bottom-10 -right-10 w-72 h-72 rounded-full border border-luxuryGold/10 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="text-luxuryGold text-3xl sm:text-4xl font-accent block mb-3">Beauty in Every Detail</span>
+            <h2 class="text-3xl sm:text-5xl font-semibold tracking-wider text-blackAccent mb-6 uppercase">
+                Spa Menu & Service Pricing
+            </h2>
+            <div class="w-24 h-[1px] bg-luxuryGold mx-auto mb-6"></div>
+            <p class="text-darkGray text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-light">
+                Welcome to <strong class="font-medium text-blackAccent">BeBe Nails Spa</strong>. Indulge yourself with our curated luxury nail and body treatments, meticulously crafted under the philosophy of <span class="italic text-luxuryGold font-medium">Quiet Luxury</span>.
+            </p>
+            
+            <!-- SERVICE SEARCH BAR -->
+            <div class="mt-8 max-w-md mx-auto relative">
+                <input type="text" id="search-input" onkeyup="filterServices()" placeholder="Search services (e.g., Pedicure, Russian, Acrylic...)" class="w-full pl-10 pr-4 py-3 bg-warmWhite border border-lightGray focus:border-luxuryGold focus:ring-1 focus:ring-luxuryGold outline-none rounded-full text-base transition-all shadow-inner placeholder:text-mediumGray text-charcoal">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-mediumGray"><i class="fa-solid fa-magnifying-glass text-xs"></i></span>
+                <span id="search-clear" onclick="clearSearch()" class="absolute right-4 top-1/2 -translate-y-1/2 text-mediumGray cursor-pointer hover:text-luxuryGold hidden"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN MENU CONTENT WRAPPER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        
+        <!-- INTRODUCING THE MENU SELECTOR -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12 sm:mb-16">
+            <button onclick="scrollToSection('pedicure-sec')" class="bg-ivory hover:bg-luxuryGold hover:text-white text-blackAccent text-xs sm:text-sm font-medium tracking-widest uppercase px-5 py-2.5 rounded-full border border-luxuryGold/20 transition-all shadow-sm">
+                Pedicures
+            </button>
+            <button onclick="scrollToSection('enhancements-sec')" class="bg-ivory hover:bg-luxuryGold hover:text-white text-blackAccent text-xs sm:text-sm font-medium tracking-widest uppercase px-5 py-2.5 rounded-full border border-luxuryGold/20 transition-all shadow-sm">
+                Nail Enhancements
+            </button>
+            <button onclick="scrollToSection('dipping-sec')" class="bg-ivory hover:bg-luxuryGold hover:text-white text-blackAccent text-xs sm:text-sm font-medium tracking-widest uppercase px-5 py-2.5 rounded-full border border-luxuryGold/20 transition-all shadow-sm">
+                Dipping Powder
+            </button>
+            <button onclick="scrollToSection('manicure-sec')" class="bg-ivory hover:bg-luxuryGold hover:text-white text-blackAccent text-xs sm:text-sm font-medium tracking-widest uppercase px-5 py-2.5 rounded-full border border-luxuryGold/20 transition-all shadow-sm">
+                Manicures
+            </button>
+            <button onclick="scrollToSection('additional-sec')" class="bg-ivory hover:bg-luxuryGold hover:text-white text-blackAccent text-xs sm:text-sm font-medium tracking-widest uppercase px-5 py-2.5 rounded-full border border-luxuryGold/20 transition-all shadow-sm">
+                Other Services
+            </button>
+        </div>
+
+        <!-- SEARCH RESULTS EMPTY MESSAGE -->
+        <div id="no-results-msg" class="hidden text-center py-12">
+            <p class="text-darkGray text-lg">No matching services found for your keyword.</p>
+            <button onclick="clearSearch()" class="mt-4 text-luxuryGold border-b border-luxuryGold text-sm">Show all services</button>
+        </div>
+
+        <!-- SECTION: PEDICURES -->
+        <section id="pedicure-sec" class="mb-16 sm:mb-24 service-section">
+            <div class="border-b border-luxuryGold/20 pb-4 mb-10 flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-semibold tracking-wider text-blackAccent uppercase">01. Spa Pedicures</h3>
+                    <p class="text-xs sm:text-sm text-darkGray font-light mt-1 italic">From timeless classics to ultimate royal therapies designed to relax, purify, and nourish your feet.</p>
+                </div>
+                <span class="text-[10px] tracking-widest text-luxuryGold uppercase mt-2 md:mt-0"><i class="fa-solid fa-leaf mr-1"></i> Premium Ingredients Included</span>
+            </div>
+
+            <!-- SUBSECTION: CLASSIC PEDICURES -->
+            <div class="mb-12">
+                <h4 class="text-xs tracking-[0.25em] text-luxuryGold font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">◆</span> CLASSIC PEDICURES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <!-- Basic $39 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="Basic Pedicure Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">Basic Pedicure</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$39</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pamper me $49 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="1. Pamper me Green Tea Spa Pedicure Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">1. Pamper Me (Green Tea)</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$49</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">Indulge in a timeless favorite with our Green Tea Spa Pedicure, featuring a relaxing foot soak, tea foot soak, callus removal, nail shaping, and cuticle care. Enjoy gentle exfoliation with a Green Tea Sugar Scrub, leaving your skin soft and revitalized. Experience a refreshing Green Tea Mask to hydrate and nourish your skin. Conclude with a soothing massage using our specialty-formulated green tea lotion and a final hot towel treatment.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-mediumGray uppercase"><i class="fa-regular fa-clock mr-1"></i> 35 Mins</span>
+                        </div>
+                    </div>
+
+                    <!-- Citrus Glow $62 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="2. Citrus Glow Orange Spa Pedicure Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">2. Citrus Glow</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$62</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">Revitalize your feet with our Citrus Glow Pedicure, featuring real orange for an extra burst of freshness! Start with a soothing soak in a warm Citrus-infused bath and orange slices, followed by a gentle exfoliation using a zesty scrub made with real orange zest. Enjoy a nourishing foot mask infused with vitamin-rich orange distract or paraffin wax of your choice, then indulge in a relaxing massage with a Citrus-scented lotion. Finally, choose a vibrant orange polish to complete your look. Step out feeling refreshed, rejuvenated, and glowing!</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-mediumGray uppercase"><i class="fa-regular fa-clock mr-1"></i> 40 Mins</span>
+                        </div>
+                    </div>
+
+                    <!-- Lemongrass $69 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="3. Lemongrass and Green Tea Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">3. Lemongrass</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$69</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">A refreshing blend of lemongrass and green tea to purify, hydrate, and renew tired feet. Includes lemongrass soak to soften and purify, gentle sugar scrub for smooth radiant skin, hydrating mask with hot towel wrap, hot stone massage to relieve tension, and a moisture-lock finish.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-mediumGray uppercase"><i class="fa-regular fa-clock mr-1"></i> 45 Mins</span>
+                        </div>
+                    </div>
+
+                    <!-- Russian pedicure (gel included) $85 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="4. Russian pedicure (gel polish included) Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">4. Russian Pedicure <span class="text-[10px] text-luxuryGold border border-luxuryGold px-1.5 py-0.5 rounded-full ml-1 font-normal tracking-wide">Gel Polish Included</span></h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$85</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">Professional dry pedicure using advanced e-file techniques with precise dry callus treatment, deep cuticle cleaning, relaxing hot candle massage, and premium Shellac/gel polish included.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-mediumGray uppercase"><i class="fa-solid fa-star mr-1 text-luxuryGold"></i> Premium Tech</span>
+                        </div>
+                    </div>
+
+                    <!-- Russian pedicure with hardgel $105 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="5. Russian pedicure with hardgel Classic Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">5. Russian Pedicure with Hard Gel</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$105</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSECTION: FALL/WINTER SEASONAL -->
+            <div class="mb-12">
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">🍂</span> FALL & WINTER SEASONAL PEDICURES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <!-- Wake me up $59 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="6. Wake me up Coffee Spa Pedicure Fall Winter Seasonal">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">6. Wake Me Up (Coffee)</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$59</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">Coffee soak to soften and awaken, gentle scrub for fresh smooth skin, nourishing mask with hot towel wrap, hot stone massage to relieve tension, and a moisture-lock finish.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-mediumGray uppercase"><i class="fa-regular fa-clock mr-1"></i> 45 Mins</span>
+                        </div>
+                    </div>
+
+                    <!-- Pumkin spice $62 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="7. Pumkin spice Fall Winter Seasonal">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">7. Pumkin Spice</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$62</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSECTION: SPRING/SUMMER SEASONAL -->
+            <div class="mb-12">
+                <h4 class="text-xs tracking-[0.25em] text-[#D9A94B] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">🌸</span> SPRING & SUMMER SEASONAL PEDICURES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <!-- Fresh cucumber $79 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="8. Fresh cucumber Spring Summer Seasonal">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">8. Fresh Cucumber</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$79</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mango bliss $66 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="9. Mango bliss pedicure Spring Summer Seasonal">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">9. Mango Bliss</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$66</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light">A tropical spa escape featuring a refreshing mango soak, mango-infused sugar scrub, nourishing mango mask, hydrating mango lotion, relaxing hot towel treatment, and soothing hot stone massage.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-wider text-yellow-500 uppercase"><i class="fa-solid fa-sun mr-1"></i> Tropical Escape</span>
+                        </div>
+                    </div>
+
+                    <!-- Minty Glow $62 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="10. Minty Glow pedicure Spring Summer Seasonal">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h5 class="text-base sm:text-lg font-semibold text-blackAccent tracking-wide">10. Minty Glow</h5>
+                                <span class="text-lg sm:text-xl font-bold text-luxuryGold">$62</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSECTION: LUXURY PEDICURE WITH STEAMER -->
+            <div class="mb-12">
+                <div class="bg-ivory/60 p-4 rounded-xl border border-luxuryGold/20 mb-8 flex items-center space-x-3">
+                    <span class="text-luxuryGold"><i class="fa-solid fa-circle-info text-lg"></i></span>
+                    <p class="text-xs text-darkGray font-light"><strong class="font-medium text-blackAccent">Luxury Privilege:</strong> All ultimate treatments below include a complimentary <span class="text-luxuryGold font-medium">Callus Treatment (worth $20)</span> and advanced <span class="text-luxuryGold font-medium">Warm Steamer therapy</span> to thoroughly soothe all your senses.</p>
+                </div>
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">👑</span> ULTIMATE LUXURY PEDICURES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <!-- Milk & Honey $77 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="11. Milk & Honey Charmers Ultimate Luxury Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <h5 class="text-base sm:text-lg font-bold text-blackAccent tracking-wide">11. Milk & Honey Charmers</h5>
+                                <span class="text-xl sm:text-2xl font-black text-luxuryGold">$77</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light mb-4">A deeply nourishing treatment featuring milk soak, steamer, callus treatment, honey sugar scrub, milk & honey mask, oat milk lotion, paraffin wax, hot towels, and relaxing hot stone massage for silky-soft feet.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-widest text-luxuryGold uppercase"><i class="fa-solid fa-crown mr-1"></i> Top Seller</span>
+                        </div>
+                    </div>
+
+                    <!-- Rose Milky Signature $89 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="12. Rose milky signature Ultimate Luxury Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <h5 class="text-base sm:text-lg font-bold text-blackAccent tracking-wide">12. Rose Milky Signature</h5>
+                                <span class="text-xl sm:text-2xl font-black text-luxuryGold">$89</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light mb-4">Indulge in luxurious rose and milk therapy featuring milk & rose soak, steamer, callus treatment, rose scrub, rose mask, rose lotion, paraffin wax, hot towel wrap, and hot stone massage.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-widest text-luxuryGold uppercase"><i class="fa-solid fa-face-smile-beam mr-1"></i> Pure Relaxation</span>
+                        </div>
+                    </div>
+
+                    <!-- Golden Saffaron $107 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="13. Golden saffaron Ultimate Luxury Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <div class="flex flex-col">
+                                    <h5 class="text-base sm:text-lg font-bold text-blackAccent tracking-wide">13. Golden Saffron</h5>
+                                    <span class="text-[9px] uppercase tracking-widest text-luxuryGold font-medium mt-1">✨ 24K Gold & Saffron Infused</span>
+                                </div>
+                                <span class="text-xl sm:text-2xl font-black text-luxuryGold">$107</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light mb-4">Experience luxury with a saffron soak, gold & orange exfoliation, 24K gold foot mask, gold serum, gold lotion, steamer, callus treatment, hot stones, hot towels, and our signature reflexology massage.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-widest text-luxuryGold uppercase"><i class="fa-solid fa-gem mr-1"></i> Ultra-Premium</span>
+                        </div>
+                    </div>
+
+                    <!-- Aromatic Ginger $115 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300" data-name="14. Aromatic ginger botanical spa Ultimate Luxury Pedicures">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <h5 class="text-base sm:text-lg font-bold text-blackAccent tracking-wide">14. Aromatic Ginger Botanical Spa</h5>
+                                <span class="text-xl sm:text-2xl font-black text-luxuryGold">$115</span>
+                            </div>
+                            <p class="text-xs text-darkGray leading-relaxed font-light mb-4">A therapeutic botanical experience featuring herbal soak, fresh ginger root, steamer, callus treatment, lime & honey botanical mask, paraffin treatment, aromatic oil massage, neck heating pad, hot stones, hot towels, and special massage tools.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-ivory flex justify-between items-center">
+                            <span class="text-[10px] tracking-widest text-luxuryGold uppercase"><i class="fa-solid fa-spa mr-1"></i> Healing Botanical</span>
+                        </div>
+                    </div>
+
+                    <!-- Velvet Wine Pedicure $128 -->
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 relative overflow-hidden" data-name="15. Velvet wine pedicure Ultimate Luxury Pedicures Signature Royal">
+                        <div class="absolute top-0 right-0 bg-luxuryGold text-white text-[10px] tracking-widest uppercase font-semibold px-4 py-1.5 rounded-bl-xl shadow-sm">
+                            🏆 Signature Service
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-4">
+                                <div class="flex flex-col">
+                                    <h5 class="text-lg sm:text-2xl font-bold text-blackAccent tracking-wide">15. Velvet Wine Pedicure</h5>
+                                    <span class="text-xs italic text-luxuryGold font-medium mt-1">An exquisite royal pampering experience</span>
+                                </div>
+                                <span class="text-2xl sm:text-4xl font-black text-luxuryGold">$128</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-darkGray leading-relaxed font-light mb-6">
+                                Indulge in a luxurious experience with our Velvet Wine Pedicure. Enjoy a revitalizing red wine and rose petal foot soak, followed by a red wine exfoliation to refresh your skin. Relax with a soothing rose petal foot mask and hydrating velvet rose lotion. Experience the warmth of paraffin wax, a rejuvenating massage with reflexology tools, and a heating pad to melt away neck tension. Treat your feet to the royal pampering they deserve!
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-luxuryGold/20 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4">
+                            <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs text-darkGray">
+                                <span class="bg-white px-2.5 py-1 rounded-full border border-ivory"><i class="fa-solid fa-wine-glass text-red-700 mr-1"></i> Red Wine Soak</span>
+                                <span class="bg-white px-2.5 py-1 rounded-full border border-ivory"><i class="fa-solid fa-sun mr-1 text-orange-400"></i> Neck Heating Pad</span>
+                                <span class="bg-white px-2.5 py-1 rounded-full border border-ivory"><i class="fa-solid fa-medal text-luxuryGold mr-1"></i> Royal Care</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSECTION: ADD-ON PEDICURES -->
+            <div>
+                <h4 class="text-xs tracking-[0.25em] text-darkGray font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">➕</span> ADD-ON SERVICES FOR PEDICURES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury p-6 sm:p-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Callus Treatment Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Callus Treatment</h6>
+                                <p class="text-[10px] text-mediumGray">Deep heel callus removal</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shellac Upgrade Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shellac Upgrade</h6>
+                                <p class="text-[10px] text-mediumGray">Upgrade to Shellac gel</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="French Finish Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">French Finish</h6>
+                                <p class="text-[10px] text-mediumGray">Elegant French finish</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$10</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="One Big Toe Extension Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">One Big Toe Extension</h6>
+                                <p class="text-[10px] text-mediumGray">Toenail extension (one toe)</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shellac Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shellac (Extra)</h6>
+                                <p class="text-[10px] text-mediumGray">Extra Shellac polish coat</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Gel Polish Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Gel Polish</h6>
+                                <p class="text-[10px] text-mediumGray">Premium Gel polish</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Chrome Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Chrome Upgrade</h6>
+                                <p class="text-[10px] text-mediumGray">Chrome reflection effect</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">+$15</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shellac on Toe Add-on Pedi">
+                            <div>
+                                <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shellac on Toes</h6>
+                                <p class="text-[10px] text-mediumGray">Shellac gel coat on toes</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs sm:text-sm font-bold text-luxuryGold">+$15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: NAIL ENHANCEMENT -->
+        <section id="enhancements-sec" class="mb-16 sm:mb-24 service-section">
+            <div class="border-b border-luxuryGold/20 pb-4 mb-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold tracking-wider text-blackAccent uppercase">02. Nail Enhancements</h3>
+                <p class="text-xs sm:text-sm text-darkGray font-light mt-1 italic font-light">Sculpting perfect, trendy shapes with advanced Gel, Acrylic, and Russian e-file manicures.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- FULLSET CATEGORY -->
+                <div>
+                    <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                        <span class="mr-2">💅</span> FULL SET SERVICES
+                    </h4>
+                    <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                        
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Acrylic/Gel Fullset">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Acrylic / Gel Fullset</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$51+</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Builder Gel Fullset">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Builder Gel Fullset</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$65+</span>
+                            </div>
+                        </div>
+
+                        <!-- Item nested Russian -->
+                        <div class="p-6 bg-ivory/10 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center border-l-4 border-luxuryGold" data-name="Builder Gel with Russian Manicure">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Builder Gel with Russian Manicure</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$85</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Builder Gel with Extension">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Builder Gel with Extension</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$70+</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 bg-ivory/10 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center border-l-4 border-luxuryGold" data-name="Builder Gel with Extension & Russian Manicure">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Builder Gel with Extension & Russian Manicure</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$90</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="TAP Fullset">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Tap Fullset</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$65+</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="TAP with Extension">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Tap with Extension</h5>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$70+</span>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Gel X Short / Medium / Long / Extra Long">
+                            <div class="pr-4 flex flex-col">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Gel X Premium System</h5>
+                                <div class="flex flex-wrap gap-1.5 mt-1.5">
+                                    <span class="bg-ivory px-2 py-0.5 text-[9px] rounded-full border border-luxuryGold/10">Short: <strong>$65</strong></span>
+                                    <span class="bg-ivory px-2 py-0.5 text-[9px] rounded-full border border-luxuryGold/10">Medium: <strong>$70</strong></span>
+                                    <span class="bg-ivory px-2 py-0.5 text-[9px] rounded-full border border-luxuryGold/10">Long: <strong>$75</strong></span>
+                                    <span class="bg-ivory px-2 py-0.5 text-[9px] rounded-full border border-luxuryGold/10">Extra Long: <strong>$80</strong></span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-angles-right text-luxuryGold/50 animate-pulse hidden sm:block"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FILL IN & REMOVALS -->
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                            <span class="mr-2">🔄</span> FILL IN SERVICES
+                        </h4>
+                        <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Acrylic Fill in">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Acrylic</h5>
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$45+</span>
+                            </div>
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Builder Gel Fill in">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Builder Gel</h5>
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$55+</span>
+                            </div>
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="TAP Fill in">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Tap</h5>
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$55+</span>
+                            </div>
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Gel X Fill in">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Gelx</h5>
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$55+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REFINING & DECOR DETAILS -->
+                    <div>
+                        <h4 class="text-xs tracking-[0.25em] text-darkGray font-semibold uppercase mb-6 flex items-center">
+                            <span class="mr-2">✨</span> STYLE & CUSTOM ADD-ONS
+                        </h4>
+                        <div class="bg-white rounded-card border border-ivory shadow-luxury p-6 sm:p-8">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Cut down style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Cut down</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shape style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shape</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Repair style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Repair</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="French style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">French Finish</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$10</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Deep French style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Deep French</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Chrome / Cat eye style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Chrome / Cat Eye</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Polka Dots style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Polka Dots Design</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15 - $25</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Add-on Manicure style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Add-on Manicure</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$10</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Gel Removal style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Gel Removal</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Acrylic Removal style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Acrylic Removal</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$10</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Removal without reapplication style">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Removal without reapplication</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: DIPPING POWDER -->
+        <section id="dipping-sec" class="mb-16 sm:mb-24 service-section">
+            <div class="border-b border-luxuryGold/20 pb-4 mb-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold tracking-wider text-blackAccent uppercase">03. Dipping Powder</h3>
+                <p class="text-xs sm:text-sm text-darkGray font-light mt-1 italic">Sulfate-free dipping powder system to protect natural nails while providing a lightweight, natural appearance.</p>
+            </div>
+
+            <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Dip Change Dipping Powder">
+                    <h4 class="text-sm sm:text-base font-semibold text-blackAccent">Dip Change</h4>
+                    <span class="text-sm sm:text-base font-bold text-luxuryGold">$45</span>
+                </div>
+                <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Dip Manicure Dipping Powder">
+                    <h4 class="text-sm sm:text-base font-semibold text-blackAccent">Dip Manicure</h4>
+                    <span class="text-sm sm:text-base font-bold text-luxuryGold">$55</span>
+                </div>
+                <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Dip with Russian Manicure Dipping Powder">
+                    <h4 class="text-sm sm:text-base font-semibold text-blackAccent">Dip with Russian Manicure</h4>
+                    <span class="text-sm sm:text-base font-bold text-luxuryGold">$78</span>
+                </div>
+            </div>
+
+            <!-- Dipping Addons -->
+            <div class="mt-8">
+                <h5 class="text-xs tracking-[0.25em] text-darkGray font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">+</span> DIPPING ADD-ONS
+                </h5>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury p-6 sm:p-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shape add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shape</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Length add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Length</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$5</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Add tip add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Add Tip</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$7</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="French add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">French Finish</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$10</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Deep French add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Deep French</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Chrome / Cat eye add-on">
+                            <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Chrome / Cat Eye</h6>
+                            <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MANICURE -->
+        <section id="manicure-sec" class="mb-16 sm:mb-24 service-section">
+            <div class="border-b border-luxuryGold/20 pb-4 mb-10">
+                <h3 class="text-2xl sm:text-3xl font-semibold tracking-wider text-blackAccent uppercase">04. Manicure Services</h3>
+                <p class="text-xs sm:text-sm text-darkGray font-light mt-1 italic">Nourishing treatments to pamper your elegant hands and elevate your look.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Standard Manicures -->
+                <div>
+                    <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                        <span class="mr-2">✨</span> ESSENTIAL MANICURES
+                    </h4>
+                    <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Classic manicure">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Classic Manicure</h5>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$29</span>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Gel/Shellac manicure">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Gel / Shellac Manicure</h5>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$39</span>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="B.I.A.B manicure Builder in a Bottle">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">B.I.A.B Manicure</h5>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$55</span>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Collagen Mask Manicure Addon">
+                            <div class="pr-4">
+                                <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Collagen Mask Add-on</h5>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Russian Manicures & Polish options -->
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                            <span class="mr-2">🇷🇺</span> RUSSIAN ADVANCED MANICURES
+                        </h4>
+                        <div class="bg-white rounded-card border border-luxuryGold/20 shadow-luxury overflow-hidden divide-y divide-ivory">
+                            <!-- Item -->
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Russian manicure with regular polish">
+                                <div class="pr-4">
+                                    <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Russian Manicure w/ Regular Polish</h5>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm sm:text-base font-bold text-luxuryGold">$55</span>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Russian manicure with gel polish">
+                                <div class="pr-4">
+                                    <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Russian Manicure w/ Gel Polish</h5>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-sm sm:text-base font-bold text-luxuryGold">$78</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs tracking-[0.25em] text-darkGray font-semibold uppercase mb-6 flex items-center">
+                            <span class="mr-2">+</span> POLISH & CUSTOM ADD-ONS
+                        </h4>
+                        <div class="bg-white rounded-card border border-ivory shadow-luxury p-6 sm:p-8">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="French finish manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">French Finish</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Chrome cateye manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Chrome / Cat Eye</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$20</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Toe polish manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Toe Polish</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$25</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Nail polish change manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Nail Polish</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$15</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Gel / Shellac only manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Gel / Shellac Only</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$28</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-ivory" data-name="Shellac/gel change toe manicure">
+                                    <h6 class="text-xs sm:text-sm font-semibold text-blackAccent">Shellac / Gel (Toes)</h6>
+                                    <span class="text-xs sm:text-sm font-bold text-luxuryGold">$35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ADDITIONAL & WAXING -->
+        <section id="additional-sec" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 service-section">
+            
+            <!-- COLUMN 1: ADDITIONAL SERVICES -->
+            <div data-name="ADDITIONAL SERVICES Remove repair polish">
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">⚙️</span> OTHER SERVICES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Acrylic Removal">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Acrylic Removal</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Nail Repair">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Nail Repair</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Dip/Acrylic Removal">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Dip / Acrylic Removal</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Gel/Dip/Acrylic Removal Only">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Gel/Dip/Acrylic Removal Only</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Polish Change Nails Toes">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Polish Change (Nails/Toes)</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Polish Change With Gel Nails Toes">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Polish Change with Gel</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: GENERAL ADD-ONS -->
+            <div data-name="Add On shellac french deep french addon manicure">
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">+</span> ADD ON
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Shellac Add On">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Shellac</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="French Add On">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">French</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Deep French Add On">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Deep French</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Add-on Manicure Add On">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Add-on Manicure</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: WAXING SERVICES -->
+            <div data-name="Waxing Service eyebrow lip chin bikini">
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">🍯</span> WAXING SERVICES
+                </h4>
+                <div class="bg-white rounded-card border border-ivory shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Eyebrows Wax">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Eyebrows</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Eyebrows Tint">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Eyebrows Tint</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Lip Wax">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Lip Wax</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Chin Wax">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Chin Wax</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00</span>
+                    </div>
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Bikini Wax">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Bikini Wax</h5>
+                        <span class="text-sm sm:text-base font-bold text-luxuryGold">$00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 4: LASH EXTENSION & INFO -->
+            <div data-name="Lash Extension Appointment only">
+                <h4 class="text-xs tracking-[0.25em] text-[#C9972C] font-semibold uppercase mb-6 flex items-center">
+                    <span class="mr-2">👁️</span> LASH EXTENSION
+                </h4>
+                <div class="bg-white rounded-card border border-luxuryGold/20 shadow-luxury overflow-hidden divide-y divide-ivory">
+                    <div class="p-6 hover:bg-ivory/20 transition-all duration-300 flex justify-between items-center" data-name="Lash Extension Appointment only">
+                        <h5 class="text-sm sm:text-base font-semibold text-blackAccent">Lash Extension</h5>
+                        <span class="text-[10px] tracking-widest uppercase text-luxuryGold font-semibold">Appointment Only</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECTION: CALL TO ACTION / BOOKING & INFOS -->
+    <section id="booking-cta" class="bg-white py-16 sm:py-24 border-t border-ivory relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto">
+                
+                <!-- Left Details -->
+                <div>
+                    <span class="text-luxuryGold font-accent text-3xl block mb-2">BeBe Nails Spa</span>
+                    <h3 class="text-2xl sm:text-4xl font-semibold tracking-wider text-blackAccent mb-6 uppercase">Opening Hours & Reservations</h3>
+                    <p class="text-darkGray text-sm sm:text-base leading-relaxed font-light mb-8">
+                        Let us provide the most relaxing moments of your day. To ensure exceptional service and minimize wait times, we highly recommend booking your appointment in advance.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-luxuryGold mt-1"><i class="fa-solid fa-clock"></i></span>
+                            <div>
+                                <h5 class="text-sm font-semibold text-blackAccent uppercase tracking-wider">Business Hours</h5>
+                                <p class="text-xs text-darkGray mt-1">Mon - Fri: 09:30 AM - 07:30 PM</p>
+                                <p class="text-xs text-darkGray">Saturday: 09:00 AM - 06:00 PM</p>
+                                <p class="text-xs text-darkGray">Sunday: 11:00 AM - 05:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="text-luxuryGold mt-1"><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <h5 class="text-sm font-semibold text-blackAccent uppercase tracking-wider">Our Location</h5>
+                                <p class="text-xs text-darkGray mt-1">2207 S Telegraph Rd Ste A, Bloomfield Twp, MI 48302, United States</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="text-luxuryGold mt-1"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <h5 class="text-sm font-semibold text-blackAccent uppercase tracking-wider">Contact Phone</h5>
+                                <p class="text-xs text-darkGray mt-1">(248) 990-6354</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blackAccent text-lightGray py-12 border-t border-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xl sm:text-2xl font-bold tracking-[0.15em] text-white uppercase mb-3">
+                BEBE <span class="text-luxuryGold font-medium">NAILS SPA</span>
+            </h2>
+            <p class="font-accent text-luxuryGold text-2xl mb-6">Beauty in Every Detail</p>
+            <div class="w-16 h-[1px] bg-luxuryGold/40 mx-auto mb-6"></div>
+            
+            <p class="text-xs text-mediumGray max-w-md mx-auto mb-8 font-light leading-relaxed">
+                Where elite nail artistry meets exquisite care, delivering timeless beauty and pure, serene relaxation.
+            </p>
+
+            <div class="flex justify-center space-x-6 mb-8 text-lg">
+                <a href="#" class="hover:text-luxuryGold transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-luxuryGold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-luxuryGold transition-colors"><i class="fa-brands fa-google"></i></a>
+            </div>
+
+            <p class="text-[10px] text-darkGray uppercase tracking-widest">
+                &copy; 2026 BeBe Nails Spa. All Rights Reserved. Designed according to Brand Design System v2.0
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS LOGIC -->
+    <script>
+        // Smooth scroll helper
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const headerOffset = 90;
+                const elementPosition = el.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // Search and filter all service rows/cards marked with data-name.
+        function getSearchableItems(root = document) {
+            return Array.from(root.querySelectorAll('[data-name]'))
+                .filter(item => !item.classList.contains('service-section') && !item.querySelector('[data-name]'));
+        }
+
+        function filterServices() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            const searchableItems = getSearchableItems();
+            const sections = document.querySelectorAll('.service-section');
+            const clearBtn = document.getElementById('search-clear');
+            let foundAny = false;
+
+            clearBtn.classList.toggle('hidden', query.length === 0);
+
+            searchableItems.forEach(item => {
+                const searchTags = item.getAttribute('data-name')?.toLowerCase() || '';
+                const text = item.textContent.toLowerCase();
+                const isVisible = query.length === 0 || searchTags.includes(query) || text.includes(query);
+                item.style.display = isVisible ? '' : 'none';
+                foundAny = foundAny || isVisible;
+            });
+
+            sections.forEach(sec => {
+                const visibleItems = getSearchableItems(sec);
+                const hasVisibleItems = visibleItems.some(item => item.style.display !== 'none');
+                sec.style.display = hasVisibleItems ? '' : 'none';
+            });
+
+            const noResults = document.getElementById('no-results-msg');
+            noResults.classList.toggle('hidden', foundAny || query.length === 0);
+        }
+
+        function clearSearch() {
+            document.getElementById('search-input').value = '';
+            filterServices();
+        }
+
+        // Mobile menu toggle
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
